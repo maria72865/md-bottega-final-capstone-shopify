@@ -13,8 +13,7 @@ const { receiveWebhook, registerWebhook } = require('@shopify/koa-shopify-webhoo
 const getSubscriptionUrl = require('./server/getSubscriptionUrl');
 
 const port = parseInt(process.env.PORT, 10) || 3000;
-// const dev = process.env.NODE_ENV !== 'production';
-const dev = process.env.NODE_ENV;
+const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
